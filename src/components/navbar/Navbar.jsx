@@ -19,7 +19,7 @@ function Navbar() {
             <img src={logo} alt="" className="h-14 w-auto" />
           </div>
           <div className="md:text-[36px] text-xl font-bold text-white  drop-shadow-md">
-            TL TECHNOLOGIES
+            KERALA DRIVES
           </div>
         </div>
       </div>

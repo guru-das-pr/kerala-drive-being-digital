@@ -30,73 +30,48 @@ export const documents = [
 
 export const services = [
   {
-    
     "image": car_1,
-    "document":sg,
-    "heading": "SERVER GUARD ",
-    "Tagline": "Proactive Monitoring for Peak Performance.",
-    "paragraph": "Our advanced Server Monitoring System ensures uninterrupted performance by delivering real-time insights into server health. It proactively alerts you to potential issues before they affect operations, and provides detailed reports to optimize performance. With our comprehensive monitoring solutions, you can stay ahead of downtime and maintain peak efficiency effortlessly."
+    "document": sg,
+    "heading": "Thrill & Adventure",
+    "Tagline": "Gear up for the Ultimate Adventure.",
+    "paragraph": "Gear up for the ultimate adventure with our exhilarating tours, adrenaline-packed activities, and unforgettable guided experiences. From exploring untouched wilderness to cruising serene waters, your next big thrill awaits."
   },
   {
-    
     "image": stusentmanagementsystem,
-    "document":eh,
-    "heading": "EDUHUB - Student Management System ",
-    "Tagline": "Simplify Enrollment & Track Progress Seamlessly. (Prototype)",
-    "paragraph": "Our Student Management System simplifies enrollment, tracks student progress, and enables smooth communication between parents, students, and educational institutions. Each user has a dedicated login portal to manage applications, monitor checklists, and stay informed on their status. Additionally, Phase 2 will enhance the system with attendance tracking and full academic management."
+    "document": eh,
+    "heading": "Relax & Recharge",
+    "Tagline": "Escape, Relax, and Recharge in Comfort.",
+    "paragraph": "Escape the everyday and indulge in comfort with serene stays, rejuvenating massages, and luxurious beauty treatments. After a day of exploring, unwind with our world-class pampering that leaves you feeling refreshed."
   },
   {
-    
     "image": sms,
-    "document":null,
-    "heading": "EVERY HOME (Mobile App)",
-    "Tagline": "Connecting Homes, Professionals, & Businesses Seamlessly.",
-    "paragraph": "Connecting Homes, Professionals, and Businesses. This revolutionary 3-in-1 app streamlines home management, professional networking, and task coordination. With features for scheduling maintenance, connecting with service providers, and managing tasks, it delivers a unified platform designed to enhance efficiency and productivity for all users."
+    "document": null,
+    "heading": "Feast on Flavor",
+    "Tagline": "Embark on a Culinary Journey.",
+    "paragraph": "Embark on a culinary journey with our curated dining experiences that offer the best of local and global cuisine. Satisfy your inner foodie with mouthwatering dishes that promise an explosion of flavor at every bite."
   },
   {
-    
     "image": dm,
-    "document":tlbdf,
-    "heading": "BEING DIGITAL (Digital Marketing)",
-    "Tagline": "Elevate Your Brand with Cutting-Edge Digital Solutions.",
-    "paragraph": "Empower your brand with cutting-edge digital marketing solutions that drive engagement and growth in the digital landscape. Our comprehensive services, including compelling content creation and online presence optimization, elevate your digital strategy. which integrates with WhatsApp and offers all-in-one functionality tailored to your business needs. Explore more at connect.tltechnologies.net."
+    "document": tlbdf,
+    "heading": "Journey in Luxury",
+    "Tagline": "Travel in Comfort and Style.",
+    "paragraph": "Hit the road in style with our premium buses and tempo travelers, designed for comfort and ease. Whether you're on a group getaway or celebrating a special occasion, enjoy a smooth ride packed with first-class amenities."
   },
   {
-    
     "image": cls,
-    "document":cs,
-    "heading": "CLICK SHARE (Social Media Scheduler)",
-    "Tagline": "Master Your Social Media Effortlessly.",
-    "paragraph": "CLICKSHARE is a powerful tool for managing multiple social media accounts from one platform. It offers scheduling, performance analysis, and audience engagement features. Enhance your social media strategy with its advanced social listening and campaign management capabilities."
+    "document": cs,
+    "heading": "Choose Your Adventure Ride",
+    "Tagline": "Find Your Perfect Ride.",
+    "paragraph": "Select your perfect ride from our range of vehicles, including hatchbacks, sedans, and premium SUVs. Whether it’s a rugged adventure or a family road trip, we've got the wheels to match your journey."
   },
   {
-    
     "image": ecommerce,
-    "document":null,
-    "heading": "Mini E-Commerce Website (Being Digital) ",
-    "Tagline": "Launch, Sell, Advertise All in One with TL.",
-    "paragraph": "Elevate your online store effortlessly with TL - Mini Ecommerce Website / Being Digital. Plus, enhance your reach with integrated social media campaigns across seven platforms, all from one comprehensive solution. Boost your digital presence and drive growth with TL’s all-in-one eCommerce and advertising solution."
+    "document": null,
+    "heading": "Crafted Just for You",
+    "Tagline": "Tailored Journeys, Extraordinary Adventures.",
+    "paragraph": "Every journey should be unique. Whether you’re a group of explorers, family vacationers, or international adventurers, we create personalized experiences that turn every trip into an extraordinary adventure."
   },
-  {
-    
-    "image": apm,
-    "document":null,
-    "heading": "SLOTIZE (Appointment Management System) ",
-    "Tagline": "Streamline Scheduling, Enhance Service.",
-    "paragraph": "Streamline appointment scheduling and tracking effortlessly with our intuitive platform. Manage bookings, monitor financial growth through a comprehensive dashboard, and coordinate employee schedules efficiently. Enhance operational efficiency and deliver seamless service to both clients and staff."
-  },
-  {
-    "image": tlservices,
-   "document":null,
-
-    "heading": "Comprehensive Digital Solutions ",
-"Tagline" : "All Our Services",
-
-
-    "paragraph": "TL provides comprehensive digital solutions to boost your business. We specialize in dynamic websites, advanced e-commerce platforms, custom ERP systems, and essential services like domain management and payment gateway integration. Our branding and marketing offerings include logo design, YouTube reels, and various promotional materials to elevate your brand and streamline operations."
-  },
-
-]
+];
 
 
 export const products = [
