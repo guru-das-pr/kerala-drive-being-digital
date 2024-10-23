@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import LoadingSpinner from "./components/spinners/LoadingSpinner";
 import LandingPage from "./pages/LandingPage";
+import CookieConsent from "./components/form/cookieComponents";
 
 
 export default function App() {
@@ -62,6 +63,7 @@ export default function App() {
           <Route path="/" element={<LandingPage/>} />
           <Route path="/about" element={<h1>Product and Services</h1>} />
         </Route>
+        
       </>
 
     )

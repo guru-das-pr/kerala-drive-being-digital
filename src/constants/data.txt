@@ -1,0 +1,39 @@
+export const services = [
+  {
+    "image": [thrilladventure , thrilladventure2],
+    "heading": "Thrill & Adventure",
+    "Tagline": "Gear up for the Ultimate Adventure.",
+    "paragraph": "Gear up for the ultimate adventure with our exhilarating tours, adrenaline-packed activities, and unforgettable guided experiences. From exploring untouched wilderness to cruising serene waters, your next big thrill awaits."
+  },
+  {
+    "image": relaxrecharge,
+    "heading": "Relax & Recharge",
+    "Tagline": "Escape, Relax, and Recharge in Comfort.",
+    "paragraph": "Escape the everyday and indulge in comfort with serene stays, rejuvenating massages, and luxurious beauty treatments. After a day of exploring, unwind with our world-class pampering that leaves you feeling refreshed."
+  },
+  {
+    "image": feastonfavour,
+    "heading": "Feast on Flavor",
+    "Tagline": "Embark on a Culinary Journey.",
+    "paragraph": "Embark on a culinary journey with our curated dining experiences that offer the best of local and global cuisine. Satisfy your inner foodie with mouthwatering dishes that promise an explosion of flavor at every bite."
+  },
+  {
+    "image": travelincomfort,
+    "heading": "Journey in Luxury",
+    "Tagline": "Travel in Comfort and Style.",
+    "paragraph": "Hit the road in style with our premium buses and tempo travelers, designed for comfort and ease. Whether you're on a group getaway or celebrating a special occasion, enjoy a smooth ride packed with first-class amenities."
+  },
+  {
+    "image": journeyinluxury,
+    "document": cs,
+    "heading": "Choose Your Adventure Ride",
+    "Tagline": "Find Your Perfect Ride.",
+    "paragraph": "Select your perfect ride from our range of vehicles, including hatchbacks, sedans, and premium SUVs. Whether it’s a rugged adventure or a family road trip, we've got the wheels to match your journey."
+  },
+  {
+    "image": justforyou,
+    "heading": "Crafted Just for You",
+    "Tagline": "Tailored Journeys, Extraordinary Adventures.",
+    "paragraph": "Every journey should be unique. Whether you’re a group of explorers, family vacationers, or international adventurers, we create personalized experiences that turn every trip into an extraordinary adventure."
+  },
+];
