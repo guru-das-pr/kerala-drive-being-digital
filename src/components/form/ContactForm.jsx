@@ -61,6 +61,10 @@ const ContactForm = () => {
 
   const [phone, setPhone] = useState('');
   const message = watch('message', '');
+  const fromDate = watch('fromDate');
+  const toDate = watch('toDate');
+
+  const dateInputStyle = (dateValue) => `mt-1 block w-full border-stone-400 border outline-none p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500 ${dateValue ? 'text-stone-950' : 'text-stone-400'}`;
 
   const onSubmit = (data) => {
     console.log(data);
@@ -152,7 +156,7 @@ const ContactForm = () => {
             <input
               type="date"
               {...register('fromDate')}
-              className="mt-1 block w-full border-stone-400 border outline-none text-stone-950 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className={dateInputStyle(fromDate)}
             />
             {errors.fromDate && <p className='text-red-500 ps-4 text-[10px]'>{errors.fromDate.message}</p>}
           </div>
@@ -164,7 +168,8 @@ const ContactForm = () => {
             <input
               type="date"
               {...register('toDate')}
-              className="mt-1 block w-full border-stone-400 border outline-none text-stone-950 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              min={fromDate}
+              className={dateInputStyle(toDate)}
             />
             {errors.toDate && <p className='text-red-500 ps-4 text-[10px]'>{errors.toDate.message}</p>}
           </div>
