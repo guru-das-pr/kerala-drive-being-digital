@@ -30,7 +30,7 @@ import thrilladventure2 from '../img/Fun-Adventure.png'
 
 export const services = [
   {
-    "image": thrilladventure,
+    "image": [thrilladventure , thrilladventure2],
     "heading": "Thrill & Adventure",
     "Tagline": "Gear up for the Ultimate Adventure.",
     "paragraph": "Gear up for the ultimate adventure with our exhilarating tours, adrenaline-packed activities, and unforgettable guided experiences. From exploring untouched wilderness to cruising serene waters, your next big thrill awaits."
