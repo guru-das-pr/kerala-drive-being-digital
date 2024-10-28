@@ -16,7 +16,7 @@ function Navbar() {
       <div className="font-bold w-full  flex flex-wrap  justify-between items-center">
         <div className="flex justify-between w-full items-end gap-4">
           <div className="text-3xl h-fit w-fit rounded-full text-[50px]">
-            <img src={logo} alt="" className="h-14 w-auto  object-contain" />
+            <img src={logo} alt="" className="h-14 w-auto  object-contain bg-white" />
           </div>
           <div className="md:text-[36px] text-xl font-bold text-white  drop-shadow-md">
             KERALA DRIVES
@@ -24,10 +24,10 @@ function Navbar() {
         </div>
       </div>
       <div className={`md:hidden  absolute top-0 right-0 z-50 w-full bg-stone-950 flex flex-col text-bl items-center transition-transform duration-300 ease-in-out ${menuOpen ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
-        <SocialMediaIcons  link={"https://tltechnologies.net/"} title={<span className='text-white'>HOME</span>} />
-        <SocialMediaIcons link={"https://connect.tltechnologies.net/products&services"} title={<span className='text-white'>PRODUCTS & SERVICES</span>} />
-        <SocialMediaIcons link={"https://tltechnologies.net/about"} title={<span className='text-white'>ABOUT</span>} />
-        <SocialMediaIcons link={"https://tltechnologies.net/blog"} title={<span className='text-white'>BLOGS</span>} />
+        <SocialMediaIcons  link={"https://www.keraladrives.com"} title={<span className='text-white'>HOME</span>} />
+        <SocialMediaIcons link={"https://www.keraladrives.com/getaway-tours.html"} title={<span className='text-white'>TOUR PACKAGES</span>} />
+        <SocialMediaIcons link={"https://www.keraladrives.com/about-us.html"} title={<span className='text-white'>ABOUT</span>} />
+        <SocialMediaIcons link={"https://www.keraladrives.com/gallery.html"} title={<span className='text-white'>GALLERY</span>} />
       </div>
       {/* <div className="md:flex sm:hidden hidden gap-3 z-50 text-[18px] items-end h-fit flex-wrap text-stone-950 text-opacity-90 justify-start rounded-lg">
       <SocialMediaIcons  link={"http://sangitl2020-001-site7.atempurl.com/index.html"} title={<span className='text-white'>HOME</span>} />

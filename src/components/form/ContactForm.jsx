@@ -9,7 +9,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { SiGooglemybusiness } from 'react-icons/si';
 import SocialMediaIcons from '../icons/SocialMediaIcons';
 import TooltipButton from '../tooltip/ToolTipButton';
-
+import { format  ,startOfToday } from 'date-fns';
 
 const schema = yup.object().shape({
   name: yup
@@ -35,7 +35,7 @@ const schema = yup.object().shape({
     .typeError('Number of persons must be a number')
     .positive('Number of persons must be greater than zero')
     .integer('Number of persons must be an integer'),
-    
+
 
   fromDate: yup
     .date()
@@ -67,9 +67,27 @@ const ContactForm = () => {
   const dateInputStyle = (dateValue) => `mt-1 block w-full border-stone-400 border outline-none p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500 ${dateValue ? 'text-stone-950' : 'text-stone-400'}`;
 
   const onSubmit = (data) => {
-    console.log(data);
-  };
+    // Format the dates
+    const formattedFromDate = format(new Date(data.fromDate), 'dd MMM yyyy');
+    const formattedToDate = format(new Date(data.toDate), 'dd MMM yyyy')
 
+    // Create the WhatsApp message
+    const whatsappMessage =
+      `*Booking Request*\n\n` +
+      `*Name:* ${data.name}\n` +
+      `*Phone:* +${phone}\n` +
+      `*Destination:* ${data.destination}\n` +
+      `*Number of Persons:* ${data.numberOfPersons}\n` +
+      `*Travel Dates:* ${formattedFromDate} to ${formattedToDate}\n` +
+      `*Message:* ${data.message || 'No additional message'}`
+
+    // Create the WhatsApp URL
+    const url = `https://api.whatsapp.com/send?phone=919496462226&text=${encodeURIComponent(whatsappMessage)}`;
+
+    // Open WhatsApp in a new window
+    window.open(url, '_blank');
+  };
+  const today = format(startOfToday(), 'yyyy-MM-dd');
   return (
     <div className="custom-scrollbar p-4 w-full h-full backdrop-blur-xl text-xs overflow-y-auto text-black bg-white">
       <form onSubmit={handleSubmit(onSubmit)} className="md:space-y-2 space-y-3 max-w-lg mx-auto flex flex-col justify-between h-full w-full">
@@ -155,6 +173,7 @@ const ContactForm = () => {
             </label>
             <input
               type="date"
+              min={today}
               {...register('fromDate')}
               className={dateInputStyle(fromDate)}
             />
@@ -213,51 +232,51 @@ const ContactForm = () => {
               <FaGlobeAmericas
                 className=" md:text-2xl text-lg hover:text-black transition-all duration-300 ease-in-out text-stone-600" />
             }
-            link={"https://tltechnologies.net/"}
+            link={"https://keraladrives.com/"}
           />
           <SocialMediaIcons
             icon={
               <SiGooglemybusiness
                 className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-blue-600" />
             }
-            link={"https://www.google.com/search?q=tltechnologies&rlz=1C1ONGR_enIN1100IN1100&oq=tltechnologies&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIPCAEQLhgKGK8BGMcBGIAEMgkIAhAAGAoYgAQyCggDEAAYgAQYogQyCggEEAAYgAQYogQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQkzMDgzMWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"}
+            link={"https://g.co/kgs/Rhuop1m"}
           />
           <SocialMediaIcons
             icon={
               <FaLocationDot
                 className=" md:text-2xl text-lg hover:text-black transition-all duration-300 ease-in-out text-blue-600" />
             }
-            link={"https://maps.app.goo.gl/ruFTK9hWTrk4no1f7"}
+            link={"https://maps.app.goo.gl/YitZroxLtcdPE4y67"}
           />
           <SocialMediaIcons
             icon={
               <FaFacebookF className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-blue-500" />
             }
-            link={"https://www.facebook.com/tltechnologiespvtltd"}
+            link={"https://www.facebook.com/keraladrivestourstravel/"}
           />
           <SocialMediaIcons
             icon={
               <FaInstagram className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-pink-500" />
             }
-            link={"https://www.instagram.com/tltechnologiespvtltd/"}
+            link={"https://www.instagram.com/kerala_drives/"}
           />
           <SocialMediaIcons
             icon={
               <FaYoutube className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-red-500" />
             }
-            link={"https://www.youtube.com/channel/UCUzgPAoF6HEyR2eH9vtj-5w?sub_confirmation=1"}
+            link={"https://www.youtube.com/channel/UC3tmfmBZf5Ufqo2JSEwj6BA?sub_confirmation=1"}
           />
           <SocialMediaIcons
             icon={
               <FaPinterest className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-red-600" />
             }
-            link={"https://in.pinterest.com/tltechnologiespvtltd/"}
+            link={"https://www.pinterest.com/keraladrives195/"}
           />
           <SocialMediaIcons
             icon={
               <FaLinkedin className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-blue-600" />
             }
-            link={"https://www.linkedin.com/company/tltechnologiespvtltd/"}
+            link={"https://www.linkedin.com/company/kerala-drives/"}
           />
 
 
