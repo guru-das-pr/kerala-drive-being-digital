@@ -260,7 +260,7 @@ const ContactForm = () => {
             }
             link={"https://www.instagram.com/kerala_drives/"}
           />
-          <SocialMediaIcons
+          <SocialMediaIcons 
             icon={
               <FaYoutube className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-red-500" />
             }
