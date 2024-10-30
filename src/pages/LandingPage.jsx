@@ -2,7 +2,7 @@ import React from 'react';
 import bg from '../img/hero-banner.jpg'
 import Slider from '../components/slider/Slider';
 import Navbar from '../components/navbar/Navbar';
-import ContactForm from '../components/form/contactForm';
+import ContactForm from '../components/form/ContactForm'
 import CookieConsent from '../components/form/cookieComponents';
 
 const LandingPage = () => {
