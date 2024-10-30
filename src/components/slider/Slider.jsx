@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { services } from '../../constants/datas'
 import servicetag from '../../img/tag.png';
 import { IoCloseCircle } from 'react-icons/io5';
 import Typewriter from 'typewriter-effect';
+import { motion } from 'framer-motion';
 
 const Slider = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
