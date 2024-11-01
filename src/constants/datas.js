@@ -1,22 +1,4 @@
-import car_1 from '../img/severmonitoring.jpg';
-import apm from '../img/apm.png';
-import cls from '../img/cls.jpg';
-import dm from '../img/dm.jpg';
-import ServerDataMigration from '../img/cloud-computing-data-management-concept-min.jpg'
-import sms from '../img/hm.jpg';
-import tlservices from '../img/tlservice.jpg'
-import ecommerce from '../img/mini-ecommerce.jpg'
-import uiux from '../img/representation-user-experience-interface-design-min.jpg';
-import socialmediammarketing from '../img/smm-banner_4x.png';
-import dev from '../img/programming-background-collage-min-min.png';
-import vedioEditor from '../img/video-editor-working-from-home-night-new-project-editing-audio-film-montage-sitting-modern-kitchen-content-creator-using-professional-laptop-modern-technology-network-wireless-min.jpg';
-import customerSupport from '../img/Vertex-Outsourcing-Services-min.jpg'
-import stusentmanagementsystem from '../img/studentmanagement.jpg'
-import sg from '../Documents/TL-Server-Guard.pdf'
-import eh from '../Documents/TL-Eduhub.pdf'
-import cs from '../Documents/TL-Click-Share.pdf'
-import tlbdp from '../Documents/TL-BEING-DIGITAL-PLANS.pdf'
-import tlbdf from '../Documents/TL-BEING-DIGITAL-FEATURES.pdf'
+
 
 import thrilladventure from '../img/Thrill-Adventure.png'
 import relaxrecharge from '../img/Relax-Enjoy.png'
@@ -55,7 +37,6 @@ export const services = [
   },
   {
     "image": journeyinluxury,
-    "document": cs,
     "heading": "Choose Your Adventure Ride",
     "Tagline": "Find Your Perfect Ride.",
     "paragraph": "Select your perfect ride from our range of vehicles, including hatchbacks, sedans, and premium SUVs. Whether it’s a rugged adventure or a family road trip, we've got the wheels to match your journey."

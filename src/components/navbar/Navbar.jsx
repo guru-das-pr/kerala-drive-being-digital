@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../../img/Kd-logo.png'
+import logo from '../../img/KERALADRIVES.png';
 import SocialMediaIcons from '../icons/SocialMediaIcons';
 import { IoClose } from 'react-icons/io5';
 import { CgDetailsMore } from 'react-icons/cg';
@@ -16,7 +16,7 @@ function Navbar() {
       <div className="font-bold w-full  flex flex-wrap  justify-between items-center">
         <div className="flex justify-between w-full items-end gap-4">
           <div className="text-3xl h-fit w-fit rounded-full text-[50px]">
-            <img src={logo} alt="" className="h-14 w-auto  object-contain bg-white" />
+            <img src={logo} alt="" className="h-16 w-16 rounded-full" />
           </div>
           <div className="md:text-[36px] text-xl font-bold text-white  drop-shadow-md">
             KERALA DRIVES

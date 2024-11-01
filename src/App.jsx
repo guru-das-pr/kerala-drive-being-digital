@@ -50,7 +50,7 @@ export default function App() {
     // Hide the loading spinner after the initial load
     const initialLoadTimeout = setTimeout(() => {
       setLoading(false);
-    }, 10); //3500
+    }, 3500); //3500
 
     return () => clearTimeout(initialLoadTimeout);
   }, []);
