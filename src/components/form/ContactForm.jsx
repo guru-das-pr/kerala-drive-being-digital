@@ -184,7 +184,8 @@ const ContactForm = () => {
                   minDate={today}
                   dateFormat="dd-MM-yyyy"
                   placeholderText="Select from date"
-                  className="mt-1 block w-[350px]  sm:w-[250px] border-stone-400 border outline-none text-stone-950 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block w-full border-stone-400 border outline-none text-stone-950 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  wrapperClassName="w-full"
                 />
               )}
             />
@@ -207,7 +208,8 @@ const ContactForm = () => {
                   minDate={watch('fromDate') || today}
                   dateFormat="dd-MM-yyyy"
                   placeholderText="Select to date"
-                  className="mt-1 block  w-[350px]  sm:w-[250px] border-stone-400 border outline-none text-stone-950 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block  w-full border-stone-400 border outline-none text-stone-950 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  wrapperClassName="w-full"
                 />
               )}
             />
