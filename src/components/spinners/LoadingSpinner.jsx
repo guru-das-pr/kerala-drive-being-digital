@@ -7,7 +7,7 @@ const LoadingSpinner = () => {
       <div className="w-20 h-20  animate-pulse rounded-full ">
         <img src={logo} alt="logo kd" className='h-14 w-auto ' />
       </div>
-      <h1 className='text-[red] text-sm'>KERALA DRIVES</h1>
+      {/* <h1 className='text-[red]'>KERALA DRIVES</h1> */}
     </div>
   );
 };
