@@ -68,19 +68,20 @@ const ContactForm = () => {
 
 
   const onSubmit = (data) => {
-    // Format the dates
+      console.log(data)
+
     const formattedFromDate = format(new Date(data.fromDate), 'dd MMM yyyy');
     const formattedToDate = format(new Date(data.toDate), 'dd MMM yyyy')
 
     // Create the WhatsApp message
     const whatsappMessage =
-      `*Booking Request*\n\n` +
-      `*Name:* ${data.name}\n` +
-      `*Phone:* +${phone}\n` +
-      `*Destination:* ${data.destination}\n` +
-      `*Number of Persons:* ${data.numberOfPersons}\n` +
-      `*Travel Dates:* ${formattedFromDate} to ${formattedToDate}\n` +
-      `*Message:* ${data.message || 'No additional message'}`
+    `🌟 *Booking Request* 🌟\n\n` +
+    `👤 *Name:* ${data.name}\n` +
+    `📞 *Phone:* +${phone}\n` +
+    `🌍 *Destination:* ${data.destination}\n` +
+    `👥 *Number of Persons:* ${data.numberOfPersons}\n` +
+    `📅 *Travel Dates:* ${formattedFromDate} to ${formattedToDate}\n` +
+    `📝 *Message:* ${data.message || 'No additional message'}\n\n`;
 
     // Create the WhatsApp URL
     const url = `https://api.whatsapp.com/send?phone=919496462226&text=${encodeURIComponent(whatsappMessage)}`;
@@ -92,7 +93,7 @@ const ContactForm = () => {
   return (
     <div className="custom-scrollbar p-4 w-full h-full backdrop-blur-xl text-xs overflow-y-auto text-black bg-white">
       <form onSubmit={handleSubmit(onSubmit)} className="md:space-y-2 space-y-3 max-w-lg mx-auto flex flex-col justify-between h-full w-full">
-        <h1 className='text-3xl font-bold space-y-2'>Book Your Trip !</h1>
+        <h1 className='text-3xl font-bold space-y-2'>Plan Your Trip !</h1>
         <p className='md:text-sm text-[10px] text-black flex items-center'>Please fill out all required fields (<FaAsterisk className='text-red-500 text-[7px]' />) to ensure a smooth process.</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

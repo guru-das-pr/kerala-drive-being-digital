@@ -6,6 +6,7 @@ import {
 import LoadingSpinner from "./components/spinners/LoadingSpinner";
 import LandingPage from "./pages/LandingPage";
 import CookieConsent from "./components/form/cookieComponents";
+import ChatBotModal from "./components/chatbot/ChatbotModel";
 
 
 export default function App() {
@@ -71,6 +72,7 @@ export default function App() {
   return (
     <>
       {loading ? <LoadingSpinner /> : <RouterProvider router={router} />}
+      <ChatBotModal />
     </>
   )
 }
