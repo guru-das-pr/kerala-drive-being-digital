@@ -9,7 +9,9 @@ import { FaLocationDot } from "react-icons/fa6";
 import { SiGooglemybusiness } from 'react-icons/si';
 import SocialMediaIcons from '../icons/SocialMediaIcons';
 import TooltipButton from '../tooltip/ToolTipButton';
-import { format  ,startOfToday } from 'date-fns';
+import { format, startOfToday } from 'date-fns';
+import ReactDatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const schema = yup.object().shape({
   name: yup
@@ -64,7 +66,6 @@ const ContactForm = () => {
   const fromDate = watch('fromDate');
   const toDate = watch('toDate');
 
-  const dateInputStyle = (dateValue) => `mt-1 block w-full border-stone-400 border outline-none p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500 ${dateValue ? 'text-stone-950' : 'text-stone-400'}`;
 
   const onSubmit = (data) => {
     // Format the dates
@@ -167,28 +168,47 @@ const ContactForm = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="gap-1 flex items-center text-xs font-bold text-gray-700 ps-4">
+            <label className="gap-1 w-full flex items-center text-xs font-bold text-gray-700 ps-4">
               <FaAsterisk className='text-red-500 text-sm pe-2' />From Date
               <TooltipButton content={<p>Select the start date of your trip.</p>} />
             </label>
-            <input
-              type="date"
-              min={today}
-              {...register('fromDate')}
-              className={dateInputStyle(fromDate)}
+            <Controller
+              name="fromDate"
+              control={control}
+              render={({ field }) => (
+                <ReactDatePicker
+                  {...field}
+                  selected={field.value}
+                  onChange={(date) => field.onChange(date)}
+                  minDate={today}
+                  dateFormat="dd-MM-yyyy"
+                  placeholderText="Select from date"
+                  className="mt-1 block w-[350px]  sm:w-[250px] border-stone-400 border outline-none text-stone-950 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                />
+              )}
             />
             {errors.fromDate && <p className='text-red-500 ps-4 text-[10px]'>{errors.fromDate.message}</p>}
           </div>
+
           <div>
             <label className="gap-1 flex items-center text-xs font-bold text-gray-700 ps-4">
               <FaAsterisk className='text-red-500 text-sm pe-2' />To Date
               <TooltipButton content={<p>Select the end date of your trip.</p>} />
             </label>
-            <input
-              type="date"
-              {...register('toDate')}
-              min={fromDate}
-              className={dateInputStyle(toDate)}
+            <Controller
+              name="toDate"
+              control={control}
+              render={({ field }) => (
+                <ReactDatePicker
+                  {...field}
+                  selected={field.value}
+                  onChange={(date) => field.onChange(date)}
+                  minDate={watch('fromDate') || today}
+                  dateFormat="dd-MM-yyyy"
+                  placeholderText="Select to date"
+                  className="mt-1 block  w-[350px]  sm:w-[250px] border-stone-400 border outline-none text-stone-950 p-2 rounded-full shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                />
+              )}
             />
             {errors.toDate && <p className='text-red-500 ps-4 text-[10px]'>{errors.toDate.message}</p>}
           </div>
@@ -260,7 +280,7 @@ const ContactForm = () => {
             }
             link={"https://www.instagram.com/kerala_drives/"}
           />
-          <SocialMediaIcons 
+          <SocialMediaIcons
             icon={
               <FaYoutube className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-red-500" />
             }
