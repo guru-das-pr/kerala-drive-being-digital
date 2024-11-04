@@ -238,6 +238,29 @@ const ContactForm = () => {
             Contact Us
           </button>
         </div>
+        <div className="w-full p-4">
+          <div className="flex flex-wrap gap-2 justify-center items-center">
+            <div className="inline-flex items-center  px-4 py-2  bg-blue-500 text-white rounded-full text-xs sm:text-sm shadow-sm hover:bg-blue-600 transition-colors duration-300 cursor-default">
+              Trivandrum
+            </div>
+
+            <div className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-full text-xs sm:text-sm shadow-sm hover:bg-blue-600 transition-colors duration-300 cursor-default">
+              Kanyakumari
+            </div>
+
+            <div className="inline-flex items-center px-4 py-2  bg-blue-500 text-white rounded-full text-xs sm:text-sm  shadow-sm hover:bg-blue-600 transition-colors duration-300 cursor-default">
+              Kochi
+            </div>
+
+            <div className="inline-flex items-center px-4 py-2  bg-blue-500 text-white rounded-full text-xs sm:text-sm shadow-sm hover:bg-blue-600 transition-colors duration-300 cursor-default">
+              Wayanad
+            </div>
+
+            <div className="inline-flex items-center px-4 py-2  bg-blue-500 text-white rounded-full text-xs sm:text-sm shadow-sm hover:bg-blue-600 transition-colors duration-300 cursor-default">
+              UAE
+            </div>
+          </div>
+        </div>
 
         <div className="flex justify-evenly items-center w-full flex-wrap text-black  ">
           <span>follow us</span>
@@ -261,13 +284,13 @@ const ContactForm = () => {
             }
             link={"https://g.co/kgs/Rhuop1m"}
           />
-          <SocialMediaIcons
+          {/* <SocialMediaIcons
             icon={
               <FaLocationDot
                 className=" md:text-2xl text-lg hover:text-black transition-all duration-300 ease-in-out text-blue-600" />
             }
             link={"https://maps.app.goo.gl/YitZroxLtcdPE4y67"}
-          />
+          /> */}
           <SocialMediaIcons
             icon={
               <FaFacebookF className=" md:text-2xl text-lg transition-all duration-300 ease-in-out hover:text-black text-blue-500" />

@@ -7,6 +7,9 @@ import journeyinluxury from '../img/PickYourVehicle.png'
 import justforyou from '../img/JustforYou.png'
 import travelincomfort from '../img/TravelinComfort.png'
 import thrilladventure2 from '../img/Fun-Adventure.png'
+import accomodation from '../img/Accomodation.png'
+import accomodation2 from '../img/Accomodation-2.jpg'
+
 
 
 
@@ -46,6 +49,12 @@ export const services = [
     "heading": "Crafted Just for You",
     "Tagline": "Tailored Journeys, Extraordinary Adventures.",
     "paragraph": "Every journey should be unique. Whether you’re a group of explorers, family vacationers, or international adventurers, we create personalized experiences that turn every trip into an extraordinary adventure."
+  },
+  {
+    "image": [accomodation , accomodation2],
+    "heading": "Comfort & Convenience",
+    "Tagline": "Where Every Stay Feels Like Home.",
+    "paragraph": "Find your home away from home with our selection of comfortable, well-appointed accommodations tailored to suit every travel style. From cozy retreats to luxurious stays, enjoy spaces that combine relaxation with convenience for a truly restful experience"
   },
 ];
 
