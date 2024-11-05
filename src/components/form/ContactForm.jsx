@@ -84,7 +84,7 @@ const ContactForm = () => {
     `📝 *Message:* ${data.message || 'No additional message'}\n\n`;
 
     // Create the WhatsApp URL
-    const url = `https://api.whatsapp.com/send?phone=919496462226&text=${encodeURIComponent(whatsappMessage)}`;
+    const url = `https://api.whatsapp.com/send?phone=918086407979&text=${encodeURIComponent(whatsappMessage)}`;
 
     // Open WhatsApp in a new window
     window.open(url, '_blank');
