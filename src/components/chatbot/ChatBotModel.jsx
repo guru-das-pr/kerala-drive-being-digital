@@ -3,7 +3,6 @@ import { IoChatbubbleEllipses } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 import { IoSend } from "react-icons/io5";
 import { FaRobot } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
 
 
 
