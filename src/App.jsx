@@ -5,8 +5,7 @@ import {
 } from "react-router-dom";
 import LoadingSpinner from "./components/spinners/LoadingSpinner";
 import LandingPage from "./pages/LandingPage";
-import CookieConsent from "./components/form/cookieComponents";
-import ChatBotModal from "./components/chatbot/ChatbotModel";
+import ChatBotModal from "./components/chatbot/ChatBotModel";
 
 
 export default function App() {
