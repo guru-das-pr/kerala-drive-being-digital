@@ -172,7 +172,6 @@ const Message = ({ message }) => (
   </div>
 );
 
-// components/TypingIndicator.js
 const TypingIndicator = () => (
   <div className="flex items-center text-gray-500 mb-4">
     <div className="w-2 h-2 bg-gray-500 rounded-full mr-1 animate-bounce"></div>
@@ -181,16 +180,57 @@ const TypingIndicator = () => (
   </div>
 );
 
+// New FAQ Suggestions component
+const FAQSuggestions = ({ onQuestionClick }) => {
+  const suggestedQuestions = [
+    "What types of tour packages do you offer?",
+    "What are the popular destinations in your packages?",
+    "Do your packages include food?",
+    "What types of accommodations do you provide?",
+    "Do you have packages for honeymooners?"
+  ];
+
+  return (
+    <div className="space-y-2 mb-4">
+      <p className="text-gray-600 font-medium mb-2">Frequently Asked Questions:</p>
+      {suggestedQuestions.map((question, index) => (
+        <button
+          key={index}
+          onClick={() => onQuestionClick(question)}
+          className="w-full text-left p-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors text-gray-700 text-sm border border-gray-200"
+        >
+          {question}
+        </button>
+      ))}
+    </div>
+  );
+};
+
 const ChatBotModal = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState([{ id: 1, text: "Hello! I'm your  assistant. How can I help you?", isBot: true }]);
+  const [messages, setMessages] = useState([{ 
+    id: 1, 
+    text: "Hello! I'm your Kerala Drives assistant. How can I help you plan your trip? Feel free to ask me anything or choose from the suggestions below.", 
+    isBot: true 
+  }]);
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  const handleFAQClick = async (question) => {
+    setHasInteracted(true);
+    setMessages(prev => [...prev, { id: messages.length + 1, text: question, isBot: false }]);
+    
+    const response = generateResponse(question);
+    await simulateTyping(response);
+    
+    setMessages(prev => [...prev, { id: messages.length + 2, text: response, isBot: true }]);
+  };
 
   const findBestMatch = (input) => {
     const inputKeywords = extractKeywords(input);
@@ -216,8 +256,6 @@ const ChatBotModal = () => {
 
     return bestMatch;
   };
-
- 
 
   const generateResponse = (input) => {
     const greetings = ['hello', 'hi', 'hey'];
@@ -249,6 +287,7 @@ const ChatBotModal = () => {
     e.preventDefault();
     if (!inputText.trim()) return;
 
+    setHasInteracted(true);
     setMessages(prev => [...prev, { id: messages.length + 1, text: inputText, isBot: false }]);
     setInputText('');
 
@@ -257,8 +296,6 @@ const ChatBotModal = () => {
 
     setMessages(prev => [...prev, { id: messages.length + 2, text: response, isBot: true }]);
   };
-
-  const toggleChat = () => setIsOpen(prev => !prev);
 
   return (
     <>
@@ -271,9 +308,7 @@ const ChatBotModal = () => {
       </button>
 
       {isOpen && (
-        <div
-          className={`fixed bottom-0 md:bottom-24 right-0 w-full sm:w-[400px] h-[100dvh] md:h-[500px] transform transition-transform duration-300 ease-out z-50`}
-        >
+        <div className="fixed bottom-0 md:bottom-24 right-0 w-full sm:w-[400px] h-[100dvh] md:h-[500px] transform transition-transform duration-300 ease-out z-50">
           <div className="absolute inset-0 bg-gray-200 shadow-lg rounded-t-2xl md:rounded-2xl flex flex-col overflow-hidden">
             <button
               onClick={() => setIsOpen(false)}
@@ -288,10 +323,11 @@ const ChatBotModal = () => {
               <h1 className="text-xl font-semibold">Kerala Drives Assistant</h1>
             </div>
 
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth">
               {messages.map((message) => (
                 <Message key={message.id} message={message} />
               ))}
+              {!hasInteracted && <FAQSuggestions onQuestionClick={handleFAQClick} />}
               {isTyping && <TypingIndicator />}
               <div ref={messagesEndRef} />
             </div>
@@ -320,25 +356,12 @@ const ChatBotModal = () => {
         </div>
       )}
 
-      {/* Overlay for mobile when chat is open */}
       {isOpen && (
         <div
-          className={`fixed inset-0 bg-black transition-opacity duration-300 z-40 sm:hidden
-          ${isOpen ? 'opacity-50' : 'opacity-0'}`}
+          className="fixed inset-0 bg-black transition-opacity duration-300 z-40 sm:hidden opacity-50"
           onClick={() => setIsOpen(false)}
         />
       )}
-
-      {/* Animations for messages */}
-      <style jsx global>{`
-        @keyframes fade-in {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.5s ease-in-out;
-        }
-      `}</style>
     </>
   );
 };
