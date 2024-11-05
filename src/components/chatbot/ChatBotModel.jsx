@@ -134,7 +134,7 @@ export const faqData = [
   }
 ];
 
-export const calculateSimilarity = (str1, str2) => {
+ const calculateSimilarity = (str1, str2) => {
   const s1 = str1.toLowerCase();
   const s2 = str2.toLowerCase();
   const intersection = new Set([...s1].filter(char => s2.includes(char)));
@@ -142,7 +142,7 @@ export const calculateSimilarity = (str1, str2) => {
   return intersection.size / union.size;
 };
 
-export const extractKeywords = (input) => {
+const extractKeywords = (input) => {
   const stopWords = new Set(['a', 'an', 'the', 'is', 'are', 'do', 'does', 'i', 'you']);
   return [...new Set(input.toLowerCase()
     .replace(/[^\w\s]/g, '')
