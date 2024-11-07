@@ -6,6 +6,7 @@ import {
 import LoadingSpinner from "./components/spinners/LoadingSpinner";
 import LandingPage from "./pages/LandingPage";
 import ChatBotModal from "./components/chatbot/ChatBotModel";
+import ErrorPage from "./pages/ErrorPage";
 
 
 export default function App() {
@@ -62,6 +63,8 @@ export default function App() {
         <Route>
           <Route path="/" element={<LandingPage/>} />
           <Route path="/about" element={<h1>Product and Services</h1>} />
+          <Route path="*" element={<ErrorPage/>} />
+
         </Route>
         
       </>
