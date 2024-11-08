@@ -41,7 +41,7 @@ export default function App() {
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
-      }, 3500); // Adjust the timeout to match your animation duration
+      }, 2000); 
     };
 
     handleRouteChange();
@@ -51,7 +51,7 @@ export default function App() {
     // Hide the loading spinner after the initial load
     const initialLoadTimeout = setTimeout(() => {
       setLoading(false);
-    }, 3500); //3500
+    }, 2000); //3500
 
     return () => clearTimeout(initialLoadTimeout);
   }, []);
